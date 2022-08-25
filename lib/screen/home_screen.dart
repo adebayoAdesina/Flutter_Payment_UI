@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:payment_app/widget/head_section.dart';
 
+import '../widget/list_of_bills.dart';
+
 class HomeScreen extends StatelessWidget {
   static const id = '/';
   const HomeScreen({Key? key}) : super(key: key);
@@ -12,9 +14,9 @@ class HomeScreen extends StatelessWidget {
       body: SizedBox(
         height: size.height,
         child: Stack(
-          children: [
+          children: const [
             const HeadSection(),
-            ListOfBills()
+            Positioned(top: 320, child: ListOfBills()),
           ],
         ),
       ),
