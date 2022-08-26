@@ -8,12 +8,10 @@ class ListOfBills extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      margin: const EdgeInsets.only(
-        top: 20,
-      ),
-      height: 130,
+      margin: const EdgeInsets.only(top: 20, right: 20),
+      height: 110,
       width: size.width - 20,
-      padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 18.0),
+      padding: const EdgeInsets.only(top: 10.0, bottom: 10.0, left: 18.0),
       decoration: const BoxDecoration(
         color: kWhiteColor,
         borderRadius: BorderRadius.only(
@@ -78,36 +76,59 @@ class ListOfBills extends StatelessWidget {
               )
             ],
           ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          Row(
             children: [
-              Container(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 3.8, horizontal: 16),
-                decoration: BoxDecoration(
-                  color: Theme.of(context).scaffoldBackgroundColor,
-                  borderRadius: BorderRadius.circular(30),
-                ),
-                child: const Text(
-                  'Select',
-                  style: TextStyle(fontSize: 12.5),
+              Padding(
+                padding: const EdgeInsets.only(right: 8.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 3.8, horizontal: 16),
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).scaffoldBackgroundColor,
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      child: const Text(
+                        'Select',
+                        style: TextStyle(fontSize: 12.5),
+                      ),
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          '\$1248.00',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 13.5,
+                            letterSpacing: 1.3,
+                          ),
+                        ),
+                        Text(
+                          'Due in 3days',
+                          style: TextStyle(
+                            fontSize: 11.5,
+                            letterSpacing: 0.7,
+                            color: kIdColor,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  Text(
-                    '\$1248.00',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 13.5,
-                      letterSpacing: 1.3,
+              Container(
+                width: 5,
+                height: 35,
+                decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(30),
+                      bottomLeft: Radius.circular(30),
                     ),
-                  ),
-                  Text('Due in 3days',
-                      style: TextStyle(fontSize: 11, letterSpacing: 0.7)),
-                ],
+                    color: kHalfOvalColor),
               )
             ],
           )
