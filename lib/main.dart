@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:payment_app/constants/color.dart';
 import 'package:payment_app/route/routes.dart';
+import 'package:payment_app/screen/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: kBackgroundColor
       ),
-      initialRoute: '/',
+      initialRoute: HomeScreen.id,
       routes: routes,
     );
   }

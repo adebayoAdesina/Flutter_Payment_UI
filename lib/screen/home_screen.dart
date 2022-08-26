@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:payment_app/constants/color.dart';
+import 'package:payment_app/screen/payment_screen.dart';
 import 'package:payment_app/widget/head_section.dart';
 import 'package:payment_app/widget/pay_bill_button.dart';
 
@@ -41,7 +42,9 @@ class HomeScreen extends StatelessWidget {
             Positioned(
               bottom: 20,
               child: PayBillButton(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, PaymentScreen.id);
+                },
                 text: 'Pay all bills',
                 textColor: kWhiteColor,
                 bgColor: kMainColor,

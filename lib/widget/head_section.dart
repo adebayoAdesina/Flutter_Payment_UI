@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:payment_app/constants/color.dart';
+import 'package:payment_app/widget/pop_up_menu_button.dart';
 
 class HeadSection extends StatelessWidget {
   const HeadSection({Key? key}) : super(key: key);
@@ -76,6 +77,34 @@ class HeadSection extends StatelessWidget {
                                     color: kIdColor.withOpacity(1),
                                     offset: const Offset(0, 2),
                                     blurRadius: 50,
+                                  ),
+                                ],
+                              ),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  PopUpMenuButton(
+                                    icon: Icons.cancel,
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                    bgColor: kWhiteColor,
+                                    iconColor: kMainColor,
+                                  ),
+                                  PopUpMenuButton(
+                                    icon: Icons.add,
+                                    onTap: () {},
+                                    text: 'Add Bill',
+                                    bgColor: kWhiteColor,
+                                    iconColor: kMainColor,
+                                  ),
+                                  PopUpMenuButton(
+                                    icon: Icons.history,
+                                    text: 'History',
+                                    onTap: () {},
+                                    bgColor: kWhiteColor,
+                                    iconColor: kMainColor,
                                   ),
                                 ],
                               ),
