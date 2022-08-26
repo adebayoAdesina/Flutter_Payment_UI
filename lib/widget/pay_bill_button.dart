@@ -19,7 +19,7 @@ class PayBillButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: ()=>onTap(),
+      onTap: () => onTap(),
       child: Container(
         height: 60,
         margin: const EdgeInsets.symmetric(horizontal: 30),
@@ -29,14 +29,14 @@ class PayBillButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           border: Border.all(
             width: 2,
-            color: kMainColor,
+            color: isBorder == true ? kWhiteColor : kMainColor,
           ),
         ),
         child: Text(
           text,
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            fontSize: 50,
+            fontSize: 40,
             color: textColor,
           ),
           textAlign: TextAlign.center,
